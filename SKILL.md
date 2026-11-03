@@ -1,6 +1,6 @@
 ---
 name: perselph
-description: Use esta skill quando o usuário quiser refletir sobre impactos humanos da adoção de assistentes de IA no trabalho e gerar insights, perguntas, temas de conversa, dinâmicas ou ações para indivíduos, papéis, líderes ou times. É especialmente adequada para 1:1s, retrospectivas, dailies, mentorias, feedbacks, discussões sobre papéis, acordos de trabalho e adoção de IA. Usa Psicologia Analítica de Jung como lente interpretativa, sem diagnosticar, classificar pessoas ou identificar personas/arquétipos.
+description: Orienta reflexões sobre impactos humanos da IA no trabalho. Use em 1:1s, dailies, retrospectivas e liderança para explorar papéis, reconhecimento, autonomia e contribuição.
 ---
 
 # Perselph

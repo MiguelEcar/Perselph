@@ -5,15 +5,15 @@ import json
 import sys
 
 root = Path(__file__).resolve().parent.parent
-skill = root / 'perselph' / 'SKILL.md'
+skill = root / 'SKILL.md'
 required = [
     skill,
     root / 'README.md',
-    root / 'perselph' / 'references' / 'guia-de-facilitacao.md',
-    root / 'perselph' / 'references' / 'lentes-e-limites.md',
-    root / 'perselph' / 'references' / 'fontes-e-rastreabilidade.md',
-    root / 'perselph' / 'evals' / 'casos.json',
-    root / 'perselph' / 'evals' / 'rubrica.md',
+    root / 'references' / 'guia-de-facilitacao.md',
+    root / 'references' / 'lentes-e-limites.md',
+    root / 'references' / 'fontes-e-rastreabilidade.md',
+    root / 'evals' / 'casos.json',
+    root / 'evals' / 'rubrica.md',
 ]
 errors = [f'Arquivo ausente: {p.relative_to(root)}' for p in required if not p.is_file()]
 if skill.is_file():
@@ -29,7 +29,7 @@ if skill.is_file():
         if needle not in content:
             errors.append(f'SKILL.md não contém: {needle}')
 try:
-    data = json.loads((root / 'perselph' / 'evals' / 'casos.json').read_text(encoding='utf-8'))
+    data = json.loads((root / 'evals' / 'casos.json').read_text(encoding='utf-8'))
     assert isinstance(data['cases'], list) and len(data['cases']) >= 5
     assert all({'id', 'input', 'expect'} <= set(c) for c in data['cases'])
 except (OSError, ValueError, KeyError, AssertionError) as exc:
